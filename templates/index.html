@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Video Streaming Demonstration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+        $(function() {
+          $('#top').bind('click', function() {
+            $.getJSON('/drive?q=FORWARD',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+             $('#reverse').bind('click', function() {
+            $.getJSON('/drive?q=REVERSE',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+           $('#right').bind('click', function() {
+            $.getJSON('/drive?q=RIGHT',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+           $('#left').bind('click', function() {
+            $.getJSON('/drive?q=LEFT',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+           $('#brake').bind('click', function() {
+            $.getJSON('/drive?q=BRAKE',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+        });
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+<div class="container">
+    <div class=" centered">
+        <nav>
+            <button class="button top" id="top"><i class="icon-play"></i></button>
+            <button class="button right" id="right"><i class="icon-forward"></i></button>
+            <button class="button left" id="left"><i class="icon-backward"></i></button>
+            <button class="button bottom" id="reverse"><i class="icon-pause"></i></button>
+            <button class="center-button" id="brake"><i class="icon-stop"></i></button>
+        </nav>
+    </div>
+
+</div>
+</body>
+</html>
